@@ -18,7 +18,7 @@ public class App {
                     case 1:
                         int Ncalif;
                         Ncalif= Integer.parseInt(JOptionPane.showInputDialog("Ingresa el número de calificaciones: "));
-                        ciclosFor obj = new ciclosFor(Ncalif);
+                        Calif_Met obj = new Calif_Met(Ncalif);
                         JOptionPane.showMessageDialog(null, "El resultado es: "+obj.promedioMateriaFor());
                         break;
 

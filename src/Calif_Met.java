@@ -1,10 +1,10 @@
 import javax.swing.JOptionPane;
 
-public class ciclosFor {
+public class Calif_Met {
     private int Ncalif;
 
 
-    public ciclosFor (int Ncalif){
+    public Calif_Met (int Ncalif){
         setNcalif(Ncalif);
     }
 
