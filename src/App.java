@@ -2,28 +2,42 @@ import javax.swing.JOptionPane;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        double sumaCal=0;
-        double promedio=0;
+        String chose="\n\nElige una opción:";
+        String noV="Opción no valida";
+
         int menu = Integer.parseInt(JOptionPane.showInputDialog("MENU"
             + "\n1)Ciclos For"
             + "\n2)Ciclos While"
             + "\n3)Ciclos Do-While"
-            + "\n\nSelecciona una opción:"));
+            + chose));
 
 
         switch (menu) {
             case 1:
-                int Cfor= Integer.parseInt(JOptionPane.showInputDialog("1)Promedio Metodologia\n2)Alumnos clase\n\nElige una opción:"));
+                int Cfor= Integer.parseInt(JOptionPane.showInputDialog("1)Promedio Metodologia"
+                    + "\n2)Promedio Alumnos clase"
+                    + chose));
                 switch (Cfor) {
                     case 1:
                         int Ncalif;
                         Ncalif= Integer.parseInt(JOptionPane.showInputDialog("Ingresa el número de calificaciones: "));
-                        Calif_Met obj = new Calif_Met(Ncalif);
-                        JOptionPane.showMessageDialog(null, "El resultado es: "+obj.promedioMateriaFor());
-                        break;
+                        For_1 obj1 = new For_1(Ncalif);
+                        JOptionPane.showMessageDialog(null, obj1.toString()+"\nEl resultado es: "+obj1.promedioMateriaFor());
+                    break;
+
+                    case 2:
+                        int Nalumn;
+                        Nalumn=Integer.parseInt(JOptionPane.showInputDialog("Ingresa el número de alumnos: "));
+                        For_2 obj2= new For_2(Nalumn);
+                        JOptionPane.showMessageDialog(null, obj2.toString()+obj2.Calcular());
+                    break;
+
+                    case 3:
+
+                    break;
 
                     default:
-                        JOptionPane.showMessageDialog(null, "Opción no valida");
+                        JOptionPane.showMessageDialog(null, noV);
                         break;
                 }
                 break;
@@ -35,7 +49,7 @@ public class App {
                         break;
 
                     default:
-                        JOptionPane.showMessageDialog(null, "Opción no valida");
+                        JOptionPane.showMessageDialog(null, noV);
                         break;
                 }
                 break;
@@ -47,23 +61,13 @@ public class App {
                         break;
 
                     default:
-                        JOptionPane.showMessageDialog(null, "Opción no valida");
+                        JOptionPane.showMessageDialog(null, noV);
                         break;
                 }
                 break;
             default:
-                JOptionPane.showMessageDialog(null, "Opción no valida");
+                JOptionPane.showMessageDialog(null, noV);
                 break;
         }
-
-        // PROBLEMA 2 CON CICLO FOR
-        // int Ncal= Integer.parseInt(JOptionPane.showInputDialog("Ingresa el número de Alumnos: "));
-
-        // for (int i = 1; i <= Ncal; i++) {
-        //     double cal= Double.parseDouble(JOptionPane.showInputDialog("Introduce la calificación del alumno "+i+": "));
-        //     sumaCal+=cal;
-        //     promedio = sumaCal / Ncal;
-        // }
-        // JOptionPane.showMessageDialog(null, "Calificación media de la clase: "+promedio);
     }
 }

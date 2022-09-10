@@ -1,10 +1,10 @@
 import javax.swing.JOptionPane;
 
-public class Calif_Met {
+public class For_1 {
     private int Ncalif;
 
 
-    public Calif_Met (int Ncalif){
+    public For_1 (int Ncalif){
         setNcalif(Ncalif);
     }
 
@@ -32,4 +32,8 @@ public class Calif_Met {
         return promedio;
     }
 
+    @Override
+    public String toString() {
+        return "El número de calificaciones es: " + Ncalif;
+    }
 }
