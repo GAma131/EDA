@@ -1,5 +1,9 @@
 import javax.swing.JOptionPane;
 
+import ForCiclos.For_1;
+import ForCiclos.For_2;
+import ForCiclos.For_3;
+
 public class App {
     public static void main(String[] args) throws Exception {
         String chose="\n\nElige una opción:";
@@ -16,6 +20,7 @@ public class App {
             case 1:
                 int Cfor= Integer.parseInt(JOptionPane.showInputDialog("1)Promedio Metodologia"
                     + "\n2)Promedio Alumnos clase"
+                    + "\n3)Tabla de multiplicar"
                     + chose));
                 switch (Cfor) {
                     case 1:
@@ -33,7 +38,10 @@ public class App {
                     break;
 
                     case 3:
-
+                        int tabla;
+                        tabla= Integer.parseInt(JOptionPane.showInputDialog("Tabla de multiplicar a calcular: "));
+                        For_3 objF3= new For_3(tabla);
+                        JOptionPane.showMessageDialog(null, objF3.toString()+ objF3.Multiplicar());
                     break;
 
                     default:
