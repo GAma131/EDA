@@ -3,6 +3,8 @@ import javax.swing.JOptionPane;
 import ForCiclos.For_1;
 import ForCiclos.For_2;
 import ForCiclos.For_3;
+import ForCiclos.For_4;
+import ForCiclos.For_5;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -14,6 +16,7 @@ public class App {
             + "\n2)Ciclos While"
             + "\n3)Ciclos Do-While"
             + chose));
+        int Npersonas;
 
 
         switch (menu) {
@@ -21,8 +24,11 @@ public class App {
                 int Cfor= Integer.parseInt(JOptionPane.showInputDialog("1)Promedio Metodologia"
                     + "\n2)Promedio Alumnos clase"
                     + "\n3)Tabla de multiplicar"
+                    + "\n4)Promedio peso por edad"
+                    + "\n5)Descuentos!"
                     + chose));
                 switch (Cfor) {
+                    // !For_4 Pendiente
                     case 1:
                         int Ncalif;
                         Ncalif= Integer.parseInt(JOptionPane.showInputDialog("Ingresa el número de calificaciones: "));
@@ -42,6 +48,22 @@ public class App {
                         tabla= Integer.parseInt(JOptionPane.showInputDialog("Tabla de multiplicar a calcular: "));
                         For_3 objF3= new For_3(tabla);
                         JOptionPane.showMessageDialog(null, objF3.toString()+ objF3.Multiplicar());
+                    break;
+                    case 4:
+                        //TODO: PROMEDIO PENDIENTE
+                        Npersonas= Integer.parseInt(JOptionPane.showInputDialog("Ingresa el número de personas: "));
+                        For_4 objF4=new For_4(Npersonas);
+                        JOptionPane.showMessageDialog(null, objF4.toString()+objF4.mostrarEdadPeso());
+                    break;
+
+                    case 5:
+                        Npersonas=Integer.parseInt(JOptionPane.showInputDialog("Ingresa el número de personas: "));
+                        Double precio= Double.parseDouble(JOptionPane.showInputDialog("Ingresa el precio a pagar (sin descuento):"));
+                        For_5 objF5=new For_5(precio, Npersonas);
+                        JOptionPane.showMessageDialog(null, objF5.toString()+objF5.calcDescuento());
+                    break;
+
+                    case 6:
                     break;
 
                     default:
