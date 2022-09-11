@@ -6,6 +6,7 @@ import ForCiclos.For_3;
 import ForCiclos.For_4;
 import ForCiclos.For_5;
 import ForCiclos.For_6;
+import ForCiclos.For_7;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -28,6 +29,7 @@ public class App {
                     + "\n4) Promedio peso por edad"
                     + "\n5) Descuentos!"
                     + "\n6) Autos contaminantes"
+                    + "\n7) Suma de números"
                     + chose));
                 switch (Cfor) {
                     // !For_4 Pendiente
@@ -69,6 +71,12 @@ public class App {
                         int Nautos=Integer.parseInt(JOptionPane.showInputDialog("Ingresa el número de autos: "));
                         For_6 objF6=new For_6(Nautos);
                         JOptionPane.showMessageDialog(null, objF6.toString()+objF6.calcContaminantes());
+                    break;
+
+                    case 7:
+                        int Numeros = Integer.parseInt(JOptionPane.showInputDialog("¿De cuantos números sera la suma?: "));
+                        For_7 objF7=new For_7(Numeros);
+                        JOptionPane.showMessageDialog(null, objF7.toString()+objF7.calcSuma());
                     break;
 
                     default:
