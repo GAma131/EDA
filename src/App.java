@@ -5,6 +5,7 @@ import ForCiclos.For_2;
 import ForCiclos.For_3;
 import ForCiclos.For_4;
 import ForCiclos.For_5;
+import ForCiclos.For_6;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -22,10 +23,11 @@ public class App {
         switch (menu) {
             case 1:
                 int Cfor= Integer.parseInt(JOptionPane.showInputDialog("1)Promedio Metodologia"
-                    + "\n2)Promedio Alumnos clase"
-                    + "\n3)Tabla de multiplicar"
-                    + "\n4)Promedio peso por edad"
-                    + "\n5)Descuentos!"
+                    + "\n2) Promedio Alumnos clase"
+                    + "\n3) Tabla de multiplicar"
+                    + "\n4) Promedio peso por edad"
+                    + "\n5) Descuentos!"
+                    + "\n6) Autos contaminantes"
                     + chose));
                 switch (Cfor) {
                     // !For_4 Pendiente
@@ -64,6 +66,9 @@ public class App {
                     break;
 
                     case 6:
+                        int Nautos=Integer.parseInt(JOptionPane.showInputDialog("Ingresa el número de autos: "));
+                        For_6 objF6=new For_6(Nautos);
+                        JOptionPane.showMessageDialog(null, objF6.toString()+objF6.calcContaminantes());
                     break;
 
                     default:
