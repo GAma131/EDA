@@ -12,6 +12,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         String chose="\n\nElige una opción:";
         String noV="Opción no valida";
+        Boolean SENTINEL=true;
 
         int menu = Integer.parseInt(JOptionPane.showInputDialog("MENU"
             + "\n1)Ciclos For"
@@ -22,6 +23,8 @@ public class App {
 
 
         switch (menu) {
+            // *Ciclos FOR
+            // !For_4 Pendiente
             case 1:
                 int Cfor= Integer.parseInt(JOptionPane.showInputDialog("1)Promedio Metodologia"
                     + "\n2) Promedio Alumnos clase"
@@ -30,9 +33,10 @@ public class App {
                     + "\n5) Descuentos!"
                     + "\n6) Autos contaminantes"
                     + "\n7) Suma de números"
+                    + "\n8) ATRAS <-"
                     + chose));
+
                 switch (Cfor) {
-                    // !For_4 Pendiente
                     case 1:
                         int Ncalif;
                         Ncalif= Integer.parseInt(JOptionPane.showInputDialog("Ingresa el número de calificaciones: "));
@@ -79,13 +83,22 @@ public class App {
                         JOptionPane.showMessageDialog(null, objF7.toString()+objF7.calcSuma());
                     break;
 
+                    case 8:
+                        SENTINEL=false;
+                    break;
                     default:
                         JOptionPane.showMessageDialog(null, noV);
-                        break;
+                        SENTINEL=false;
+                    break;
                 }
-                break;
+            break;
             case 2:
-                int Cwhile= Integer.parseInt(JOptionPane.showInputDialog("\n\nElige una opción:"));
+                int Cwhile= Integer.parseInt(JOptionPane.showInputDialog("1)Promedio Metodologia"
+                + "\n2) Promedio Alumnos clase"
+                + "\n3) Tabla de multiplicar"
+                + "\n8) ATRAS <-"
+                + chose));
+
                 switch (Cwhile) {
                     case 1:
 
